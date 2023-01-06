@@ -10,11 +10,16 @@
       </div>
       <div class="location">
         Location:
-        <%= @event.location %>
+        <%= @event.location %>s
       </div>
-      <div class="location">
+      <div class="description">
         <%= @event.description %>
       </div>
+      <%= button_to "Reserve a Spot", event_attendings_path, params: { event_id: @event.id } %>
+      Attendees:
+      <% @event.attendees.each do |attendee| %>
+        <%= attendee.email %>
+      <% end %>
     </li>
   </div>
 </ul>
