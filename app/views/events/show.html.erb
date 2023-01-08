@@ -15,10 +15,17 @@
       <div class="description">
         <%= @event.description %>
       </div>
-      <%= button_to "Reserve a Spot", event_attendings_path, params: { event_id: @event.id } %>
+      <% if @event.attendees.include? current_user %>
+        <%= button_to "Unreserve", event_attending_path, params: { event_id: @event.id }, method: :delete, data: {
+          turbo_method: :delete,
+          turbo_confirm: "Are you sure?"
+        } %>
+      <% else %>
+        <%= button_to "Reserve a Spot", event_attendings_path, params: { event_id: @event.id } %>
+      <% end %>
       Attendees:
       <% @event.attendees.each do |attendee| %>
-        <%= attendee.email %>
+        <%= link_to attendee.email, user_path(attendee.id) %>
       <% end %>
     </li>
   </div>
