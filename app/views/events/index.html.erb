@@ -1,7 +1,27 @@
 <h1>Events</h1>
 <%= link_to "Create an Event", new_event_path %> 
 <ul>
-  <% @events.each do |event| %>
+  Past events:
+  <% @events.past.each do |event| %>
+    <div class="event">
+      <li>
+        <div class="title">
+          <%= link_to event.title, event %>
+        </div>
+        <div class="date">
+          Date:
+          <%= event.date %>
+        </div>
+        <div class="location">
+          Location:
+          <%= event.location %>
+        </div>
+      </li>
+    </div>
+  <% end %>
+  <br>
+  Upcoming events:
+  <% @events.upcoming.each do |event| %>
     <div class="event">
       <li>
         <div class="title">
