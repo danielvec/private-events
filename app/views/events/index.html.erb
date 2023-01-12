@@ -1,41 +1,45 @@
-<h1>Events</h1>
-<%= link_to "Create an Event", new_event_path %> 
-<ul>
-  Past events:
-  <% @events.past.each do |event| %>
-    <div class="event">
-      <li>
-        <div class="title">
-          <%= link_to event.title, event %>
+<div class="page">
+  <div class="image">
+    <img src="/assets/concert.jpg">
+    <p>Make your next plan today!</p>
+  </div>
+  <ul>
+    Upcoming events:
+    <div class="events">
+      <% @events.upcoming.each do |event| %>
+        <div class="event">
+          <li>
+            <div class="title">
+              <%= link_to event.title, event %>
+            </div>
+            <div class="date">
+              <%= event.date.strftime("%b %e, %l:%M %p") %>
+            </div>
+            <div class="location">
+              <%= event.location %>
+            </div>
+          </li>
         </div>
-        <div class="date">
-          Date:
-          <%= event.date %>
-        </div>
-        <div class="location">
-          Location:
-          <%= event.location %>
-        </div>
-      </li>
+      <% end %>
+      <br>
     </div>
-  <% end %>
-  <br>
-  Upcoming events:
-  <% @events.upcoming.each do |event| %>
-    <div class="event">
-      <li>
-        <div class="title">
-          <%= link_to event.title, event %>
+    Past events:
+    <div class="events">
+      <% @events.past.each do |event| %>
+        <div class="event">
+          <li>
+            <div class="title">
+              <%= link_to event.title, event %>
+            </div>
+            <div class="date">
+              <%= event.date.strftime("%b %e, %l:%M %p") %>
+            </div>
+            <div class="location">
+              <%= event.location %>
+            </div>
+          </li>
         </div>
-        <div class="date">
-          Date:
-          <%= event.date %>
-        </div>
-        <div class="location">
-          Location:
-          <%= event.location %>
-        </div>
-      </li>
+      <% end %>
     </div>
-  <% end %>
-</ul>
+  </ul>
+</div>

@@ -1,32 +1,35 @@
-<ul>
-  <div class="event">
-    <li>
-      <div class="title">
-        <%= @event.title %>
-      </div>
-      <div class="date">
-        Date:
-        <%= @event.date %>
-      </div>
-      <div class="location">
-        Location:
-        <%= @event.location %>s
-      </div>
-      <div class="description">
-        <%= @event.description %>
-      </div>
-      <% if @event.attendees.include? current_user %>
-        <%= button_to "Unreserve", event_attending_path, params: { event_id: @event.id }, method: :delete, data: {
-          turbo_method: :delete,
-          turbo_confirm: "Are you sure?"
-        } %>
-      <% else %>
-        <%= button_to "Reserve a Spot", event_attendings_path, params: { event_id: @event.id } %>
-      <% end %>
-      Attendees:
-      <% @event.attendees.each do |attendee| %>
-        <%= link_to attendee.email, user_path(attendee.id) %>
-      <% end %>
-    </li>
-  </div>
-</ul>
+  <ul class="list">
+    <div class="event-page">
+      <li>
+        <div class="title">
+          <h1 class="event-title">
+            <%= @event.title %>
+          </h1>
+        </div>
+        <div class="description">
+          <%= @event.description %>
+        </div>
+        <h2>Where and when?</h2>
+        <div class="event-date">
+          Date:
+          <%= @event.date.strftime("%b %e, %l:%M %p") %>
+        </div>
+        <div class="event-location">
+          Location:
+          <%= @event.location %>s
+        </div>
+        <% if @event.attendees.include? current_user %>
+          <%= button_to "Unreserve", event_attending_path, params: { event_id: @event.id }, method: :delete, data: {
+            turbo_method: :delete,
+            turbo_confirm: "Are you sure?"
+          }, class:"reserve-button" %>
+        <% else %>
+          <%= button_to "Reserve a Spot", event_attendings_path, params: { event_id: @event.id }, class:"reserve-button" %>
+        <% end %>
+        Attendees:
+        <% @event.attendees.each do |attendee| %><br>
+          <%= link_to attendee.email, user_path(attendee.id), class:"attendee" %>
+        <% end %>
+      </li>
+    </div>
+  </ul>
