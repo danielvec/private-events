@@ -26,6 +26,11 @@
         <% else %>
           <%= button_to "Reserve a Spot", event_attendings_path, params: { event_id: @event.id }, class:"reserve-button" %>
         <% end %>
+        <% if @event.creator_id == current_user.id %>
+          <%= link_to edit_event_path(@event) do %>
+            <img class="icon" src="/assets/edit.svg">
+          <% end %>
+        <% end %>
         Attendees:
         <% @event.attendees.each do |attendee| %><br>
           <%= link_to attendee.email, user_path(attendee.id), class:"attendee" %>
