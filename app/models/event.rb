@@ -5,4 +5,8 @@ class Event < ApplicationRecord
 
   scope :past, -> { where('events.date < ?', DateTime.now.in_time_zone('UTC')) }
   scope :upcoming, -> { where('events.date > ?', DateTime.now.in_time_zone('UTC')) }
+
+  validates :title, presence: true
+  validates :date, presence: true
+  validates :location, presence: true
 end
