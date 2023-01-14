@@ -4,6 +4,14 @@
   justify-content: center;
 }
 
+#error_explanation {
+  text-align: center;
+}
+
+.field_with_errors {
+  color: red;
+}
+
 h2 {
   padding-top: 3vh;
 }
@@ -83,3 +91,9 @@ textarea {
   margin: 0;
   display: inline-block;
  }
+
+ br {
+  display: block;
+  content: "";
+  margin-top: 0;
+}
