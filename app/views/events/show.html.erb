@@ -18,6 +18,19 @@
           Location:
           <%= @event.location %>s
         </div>
+        <div class="icons">
+          <% if @event.creator_id == current_user.id %>
+            <%= link_to edit_event_path(@event) do %>
+              <img class="icon" src="/assets/edit.svg">
+            <% end %>
+            <%= link_to event_path(@event), data: {
+              turbo_method: :delete,
+              turbo_confirm: "Are you sure?"
+            } do %>
+              <img class="icon" src="/assets/delete.svg">
+            <% end %>
+          <% end %>
+        </div>
         <% if @event.attendees.include? current_user %>
           <%= button_to "Unreserve", event_attending_path, params: { event_id: @event.id }, method: :delete, data: {
             turbo_method: :delete,
@@ -25,11 +38,6 @@
           }, class:"reserve-button" %>
         <% else %>
           <%= button_to "Reserve a Spot", event_attendings_path, params: { event_id: @event.id }, class:"reserve-button" %>
-        <% end %>
-        <% if @event.creator_id == current_user.id %>
-          <%= link_to edit_event_path(@event) do %>
-            <img class="icon" src="/assets/edit.svg">
-          <% end %>
         <% end %>
         Attendees:
         <% @event.attendees.each do |attendee| %><br>
