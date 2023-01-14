@@ -78,7 +78,8 @@ textarea {
  }
 
  .icon {
-  width: 4vw;
-  height: 4vh;
+  width: 1em;
+  height: 1em;
+  margin: 0;
+  display: inline-block;
  }
-
