@@ -1,25 +1,27 @@
-<div class="user">
-  User:
-  <%= @user.email %>
+<div class="user-page">
+  <div class="user">
+    User:
+    <%= @user.email %>
+  </div>
+  <ul>
+      <div class="attendings">
+        Events Attending:<br>
+        <% @user.attended_events.each do |event| %>
+          <% if event.date > DateTime.now.in_time_zone('UTC')%>
+          <li>
+            <%= link_to event.title, event_path(event.id) %><br>
+          </li>
+          <% end %>
+        <% end %>
+        <br>
+        Events Attended:<br>
+        <% @user.attended_events.each do |event| %>
+          <% if event.date < DateTime.now.in_time_zone('UTC')%>
+          <li>
+            <%= link_to event.title, event_path(event.id) %><br>
+          </li>
+          <% end %>
+        <% end %>
+      </div>
+  </ul>
 </div>
-<ul>
-    <div class="events">
-      Events Attending:<br>
-      <% @user.attended_events.each do |event| %>
-        <% if event.date > DateTime.now.in_time_zone('UTC')%>
-        <li>
-          <%= link_to event.title, event_path(event.id) %><br>
-        </li>
-        <% end %>
-      <% end %>
-      <br>
-      Events Attended:<br>
-      <% @user.attended_events.each do |event| %>
-        <% if event.date < DateTime.now.in_time_zone('UTC')%>
-        <li>
-          <%= link_to event.title, event_path(event.id) %><br>
-        </li>
-        <% end %>
-      <% end %>
-    </div>
-</ul>
