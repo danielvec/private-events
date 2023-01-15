@@ -100,10 +100,12 @@ p {
 
 .right-header {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-items: center;
+  white-space: nowrap;
 }
 
 .right-header a {
-  font-size: 18px;
+  font-size: min(1.9vw, 18px);
+  
 }
