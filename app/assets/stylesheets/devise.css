@@ -18,11 +18,12 @@
 }
 
 .login-title {
-  padding-top: 10vh;
+  padding-top: 1vh;
   padding-bottom: 2vh;
 }
 
 .notice, .alert {
-  font-size: 22px;
+  font-size: 3vh;
   color: red;
+  padding-bottom: 20vh;
 }

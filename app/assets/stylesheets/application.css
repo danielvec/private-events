@@ -92,7 +92,7 @@ p {
   border-bottom: 1px solid rgb(232, 232, 232);
 }
 
-.left-header a{
+.left-header a {
   font-size: 28px;
   margin-left: 1vw;
   color:orangered;
@@ -108,4 +108,14 @@ p {
 .right-header a {
   font-size: min(1.9vw, 18px);
   
+}
+
+.login-header a {
+  font-size: 34px;
+  color:orangered;
+}
+
+.login-header {
+  padding-top: 10vh;
+  text-align: center;
 }
