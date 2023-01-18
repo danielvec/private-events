@@ -42,29 +42,44 @@ img {
 
 p {
   position:absolute;
-  top: 15vh;
+  top: 25vh;
   left: 50vw;
   transform: translate(-50%, -50%);
-  font-size: 7vh;
+  font-size: 10vh;
+  font-weight: bold;
 }
 
 .page {
   background-color: rgb(246, 246, 246);
 }
 
+.events-heading {
+  text-align: center;
+}
+
+.event-index {
+  display: flex;
+  flex-direction: column;
+}
+
 .events {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .event {
-  height: 15vh;
-  width: 42vw;
+  height: 32vh;
+  width: 242px;
   background-color: rgb(249, 252, 252);
-  margin-top: 5px;
-  padding: 4px;
+  margin: 18px;
+  padding-top: 22px;
+  padding-left: 18px;
  }
+
+ .event:hover {
+  box-shadow: 0 0 10px rgba(33,33,33,.2); 
+}
 
  .location {
   color: rgb(78, 78, 78);
