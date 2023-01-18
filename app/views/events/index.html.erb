@@ -3,8 +3,8 @@
     <img src="/assets/concert.jpg">
     <p>Make your next plan today!</p>
   </div>
-  <ul>
-    Upcoming events:
+  <ul class="event-index">
+    <h2 class="events-heading">Upcoming Events</h2>
     <div class="events">
       <% @events.upcoming.each do |event| %>
         <div class="event">
@@ -23,7 +23,7 @@
       <% end %>
       <br>
     </div>
-    Past events:
+    <h2 class="events-heading">Past Events</h2>
     <div class="events">
       <% @events.past.each do |event| %>
         <div class="event">
