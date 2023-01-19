@@ -69,11 +69,18 @@ p {
 }
 
 .event {
-  height: 32vh;
+  height: 45vh;
   width: 242px;
   background-color: rgb(249, 252, 252);
   margin: 18px;
-  padding-top: 22px;
+ }
+
+ .event-img {
+  height: 18vh;
+  width: 242px;
+ }
+
+ .event-info {
   padding-left: 18px;
  }
 
