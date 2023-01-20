@@ -10,7 +10,9 @@
         <div class="event">
           <li>
             <div>
-              <img class="event-img" src="/assets/low.jpg">
+            <% if event.image.attached? %>
+              <img class="event-img" src="<%=(url_for(event.image))%>">
+            <% end %>
             </div>
             <div class="event-info">
               <div class="title">
