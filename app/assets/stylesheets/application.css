@@ -28,6 +28,17 @@
   padding: 0;
 }
 
+.logout-btn {
+  background-color: orangered;
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
 img {
   object-fit: cover;
   width: 100vw;
@@ -117,6 +128,12 @@ p {
   border-bottom: 1px solid rgb(232, 232, 232);
 }
 
+.header li {
+  line-height: 2em;
+}
+
+
+
 .left-header a {
   font-size: 28px;
   margin-left: 1vw;
@@ -132,7 +149,6 @@ p {
 
 .right-header a {
   font-size: min(1.9vw, 18px);
-  
 }
 
 .login-header a {

@@ -21,7 +21,7 @@
           <li></li>
           <li><%= link_to "Create an Event", new_event_path %></li>
           <li><%= link_to "Profile", user_path(current_user.id) %></li>
-          <li><%= button_to "Log out", destroy_user_session_path, method: :delete, data: { turbo: false } %></li>
+          <li><%= button_to "Log out", destroy_user_session_path, method: :delete, data: { turbo: false }, class:"logout-btn" %></li>
         </div>
       </div>
     </ul>
