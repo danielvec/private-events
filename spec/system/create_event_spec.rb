@@ -1,6 +1,5 @@
 require 'rails_helper'
 
-
 RSpec.describe 'Creating an event', type: :system do
   scenario 'valid inputs' do
     login_as(create(:user))
@@ -14,6 +13,4 @@ RSpec.describe 'Creating an event', type: :system do
     visit events_path
     expect(page).to have_content('Rails Conference')
   end
-
-  
 end
