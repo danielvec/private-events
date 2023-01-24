@@ -21,13 +21,13 @@
         <div class="icons">
           <% if @event.creator_id == current_user.id %>
             <%= link_to edit_event_path(@event) do %>
-              <img class="icon" src="/assets/edit.svg" title="Edit">
+              <img class="edit-icon" src="/assets/edit.svg" title="Edit">
             <% end %>
             <%= link_to event_path(@event), data: {
               turbo_method: :delete,
               turbo_confirm: "Are you sure?"
             } do %>
-              <img class="icon" src="/assets/delete.svg" title="Delete">
+              <img class="delete-icon" src="/assets/delete.svg" title="Delete">
             <% end %>
           <% end %>
         </div>
