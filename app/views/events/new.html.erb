@@ -9,22 +9,4 @@
     </ul>
   </div>
 <% end %>
-<div class="form">
-  <%= form_with model: @event do |form| %>
-    <%= form.label :title %><br>
-    <%= form.text_field :title, required: true %><br>
-
-    <%= form.label :date %><br>
-    <%= form.datetime_local_field :date, required: true %><br>
-
-    <%= form.label :location %><br>
-    <%= form.text_field :location, required: true %><br>
-
-    <%= form.label :description %><br>
-    <%= form.text_area :description %><br>
-
-    <%= form.label :image %><br>
-    <%= form.file_field :image %><br>
-    <%= form.submit "Submit", :class => "button" %>
-  <% end %>
-</div>
+<%= render 'events/form' %>
