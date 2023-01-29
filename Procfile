@@ -1,1 +1,1 @@
-web: rake db:schema:load && bin/rails server -b 0.0.0.0 -p 3000
+rake db:schema:load && bin/rails server -b 0.0.0.0 -p 3000
