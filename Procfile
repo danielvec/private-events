@@ -1,1 +1,1 @@
-web: bin/rails db:environment:set RAILS_ENV=development && rake db:schema:load && bin/rails server -b 0.0.0.0 -p ${PORT: -3000}
+web: bin/rails db:environment:set RAILS_ENV=development && rake db:schema:load && bin/rails server -b 0.0.0.0 -p 3000
