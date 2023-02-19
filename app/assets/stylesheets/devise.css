@@ -3,8 +3,8 @@
   justify-content: center;
 }
 
-.input, .login-button, .signup-button, .forgot-button {
-  width: 400px;
+.input, .login-button, .signup-button, .forgot-button, .notice, .alert {
+  width: min(400px, 75vw);
 }
 
 .login-button, .signup-button, .forgot-button {
@@ -23,7 +23,8 @@
 }
 
 .notice, .alert {
-  font-size: 3vh;
+  font-size: min(3vh, 4vw);
   color: red;
-  padding-bottom: 35vh;
+  text-align: center;
+  top: 80vh;
 }

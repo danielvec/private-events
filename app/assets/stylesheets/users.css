@@ -8,3 +8,8 @@
   flex-direction: column;
   align-items: center;
 }
+
+.user-page ul {
+  margin: 0;
+  padding: 0;
+}
