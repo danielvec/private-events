@@ -3,6 +3,10 @@
   justify-content: center;
 }
 
+.signup {
+  text-align: center;
+}
+
 .input, .login-button, .signup-button, .forgot-button, .notice, .alert {
   width: min(400px, 75vw);
 }
@@ -27,4 +31,9 @@
   color: red;
   text-align: center;
   top: 80vh;
+}
+
+#error_explanation ul {
+  margin: 0;
+  padding: 0;
 }
