@@ -18,3 +18,7 @@ The goal of this project is to build a site similar to a private [Eventbrite](ht
 
 - Displays a list of events attending and events attended on user pages
 
+## Rspec Tests
+
+To run the tests, enter the following from the command line:  
+`rspec`
