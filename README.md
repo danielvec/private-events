@@ -2,6 +2,8 @@
 
 This is my implementation of the Private Events project from the [The Odin Project](https://www.theodinproject.com/lessons/ruby-on-rails-private-events).
 
+<img src="privateevents.png" alt="private events homepage" width=auto height="400px"/><br>
+
 ## Project Requirements
 
 The goal of this project is to build a site similar to a private [Eventbrite](https://www.eventbrite.com/) which allows users to create events and then manage user signups.
