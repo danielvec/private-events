@@ -2,6 +2,8 @@
 
 This is my implementation of the Private Events project from the [The Odin Project](https://www.theodinproject.com/lessons/ruby-on-rails-private-events).
 
+[Click here to visit the site](https://privateevents.up.railway.app/)
+
 <img src="privateevents.png" alt="private events homepage" width=auto height="400px"/><br>
 
 ## Project Requirements
