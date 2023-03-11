@@ -37,14 +37,21 @@
       <% @events.past.each do |event| %>
         <div class="event">
           <li>
-            <div class="title">
-              <%= link_to event.title, event %>
+            <div>
+            <% if event.image.attached? %>
+              <img class="event-img" src="<%=(url_for(event.image))%>">
+            <% end %>
             </div>
-            <div class="date">
-              <%= event.date.strftime("%b %e, %l:%M %p") %>
-            </div>
-            <div class="location">
-              <%= event.location %>
+            <div class="event-info">
+              <div class="title">
+                <%= link_to event.title, event %>
+              </div>
+              <div class="date">
+                <%= event.date.strftime("%a, %b %e, %l:%M %p") %>
+              </div>
+              <div class="location">
+                <%= event.location %>
+              </div>
             </div>
           </li>
         </div>
