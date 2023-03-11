@@ -4,6 +4,10 @@
   justify-content: center;
 }
 
+.show {
+  padding: 2vw;
+}
+
 #error_explanation h2{
   text-align: center;
   font-size: 3vh;
@@ -53,9 +57,10 @@ textarea {
   border: none;
   border-radius: 4px;
   width: 20vw;
-  height: 5vh;
+  height: 6vh;
   margin-top: 3vh;
-  margin-bottom: 2vh;
+  margin-bottom: 3vh;
+  font-size: 1.8vh;
 }
 
 .event-page {
